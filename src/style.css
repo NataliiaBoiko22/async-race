@@ -1,0 +1,416 @@
+body {
+  font-family: "Prompt", sans-serif;
+  margin: 0;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: rgb(29, 28, 28);
+  color: #f7f4ef;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  min-width: 500px;
+}
+
+/* !----------------header */
+
+.header_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(./assets/abstract-splatter-background-with-tire-track-free-vector.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+  background-color: #000000;
+  background-size: contain;
+  margin: 0 0 20px 0px;
+  border-bottom: 3px dashed #ffba08;
+}
+
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 170px;
+}
+
+.header_btn {
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #000000;
+  background-color: #ffba08;
+  height: 30px;
+  width: 120px;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header_btn:hover {
+  box-shadow: 0 0 2em rgb(212, 184, 1);
+  font-weight: 600;
+  cursor: pointer;
+}
+.box {
+  position: relative;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+.box::before {
+  display: flex;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #f2f9fb
+  );
+  animation: animate 4s linear infinite;
+}
+.box::after {
+  display: flex;
+
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #ffba08
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+}
+
+.box span {
+  position: absolute;
+  inset: 5px;
+  background-color: #000000;
+  border-radius: 50%;
+  z-index: 1;
+}
+.box h1 {
+  position: relative;
+  background: none;
+  border-radius: 50%;
+  z-index: 2;
+  padding: 0 0 0 15px;
+  width: 90px;
+  color: #ffba08;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(243, 190, 18),
+    0 0 0.2em rgb(239, 213, 14);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* !----------------------------main */
+
+.main_wrapper {
+  margin: 10px;
+}
+
+.identic_btn {
+  border-radius: 15px;
+  border: none;
+  color: #061a33;
+  background-color: #ffba08;
+  height: 27px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.identic_btn:hover {
+  background-color: #ffba08;
+  box-shadow: 1.5px 1.5px 7px 1.5px rgba(255, 255, 255, 0.24);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.identic_btn:disabled {
+  background-color: #b4b2b2;
+  color: #3d3b3b;
+}
+.input_block {
+  display: block;
+  position: relative;
+}
+.create_input,
+.update_input {
+  border-radius: 15px;
+  height: 22px;
+  width: 200px;
+  background-color: white;
+}
+.create_color,
+.update_color {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 155px;
+  border: none;
+  background-color: white;
+}
+.create_color,
+.update_color[value] {
+  width: 40px;
+  height: 22px;
+  border-radius: 15px;
+}
+
+.race_btn,
+.reset_btn {
+  background-color: #ffba08;
+  width: 70px;
+}
+
+.garage_settings_row {
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+  margin: 7px;
+}
+
+/* !----------------------------Garage */
+
+.car_settings {
+  background-color: #616161;
+}
+
+.car_btn {
+  height: 20px;
+  background-color: #ebebeb;
+  margin-left: 3px;
+  text-transform: capitalize;
+}
+
+.drive_btn {
+  border: 2px solid #ebebeb;
+  border-radius: 15px;
+  color: #ebebeb;
+  background-color: #616161;
+
+  height: 24px;
+  width: 40px;
+  padding-top: 2px;
+  margin-top: 15px;
+}
+
+.drive_btn:hover {
+  border: 2px solid #ffba08;
+  color: #e9eb86;
+  cursor: pointer;
+}
+
+.drive_btn:disabled {
+  border: 2px solid #b1b1b1;
+  color: #b1b1b1;
+}
+
+.drive_btn:disabled:hover {
+  border: 2px solid #b4b2b2;
+  color: #b4b2b2;
+  cursor: pointer;
+}
+
+.car_img {
+  position: absolute;
+  left: 90px;
+  width: 100px;
+  height: 60px;
+}
+.car_name {
+  margin-left: 5px;
+}
+
+.flag_img {
+  width: 40px;
+  height: 43px;
+  margin-right: 20px;
+}
+
+.car_road {
+  background: linear-gradient(#616161, 60%, rgb(32, 32, 32));
+}
+
+.car_road_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  border: none;
+  border-top: 2.5px dotted #ffba08;
+  width: 100%;
+  height: 10px;
+  margin: 0;
+}
+
+.pagination_btn {
+  width: 75px;
+  margin: 10px;
+}
+
+/* !-----------------------------Winners */
+
+.winners_table_head {
+  background-color: #616161;
+}
+
+.invisible {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .switch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 170px;
+  }
+}
+.stop {
+  transform: translateX(-100%);
+  fill: red;
+}
+
+/* /////////////////////////////////////////////////// */
+.car_img_mini {
+  width: 40px;
+}
+.car_mini {
+  width: 65px;
+  text-align: center;
+}
+.car_mini_name {
+  width: 150px;
+}
+.car_mini_wins {
+  width: 75px;
+  text-align: center;
+}
+.car_mini_time {
+  width: 135px;
+  text-align: center;
+}
+
+.number {
+  width: 25px;
+  text-align: center;
+}
+/* ////////////////////////////////////// */
+.best_time {
+  position: relative;
+  width: 170px;
+}
+
+.wins {
+  position: relative;
+  width: 100px;
+}
+.wins:hover {
+  cursor: pointer;
+  text-shadow: rgb(255, 255, 255) 0px -2px 5px, rgb(255, 255, 255) 0px 2px 5px;
+}
+.best_time:hover {
+  cursor: pointer;
+  text-shadow: rgb(255, 255, 255) 0px -2px 5px, rgb(255, 255, 255) 0px 2px 5px;
+}
+
+.arrow_down {
+  position: absolute;
+  z-index: 3;
+  right: 5px;
+  padding: 0 35px 0 5px;
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.arrow_up {
+  position: absolute;
+  z-index: 3;
+  right: 5px;
+  padding: 0 5px 0 35px;
+  display: inline-block;
+  transform: rotate(0deg);
+}
+
+.time_up {
+  padding: 0 5px 0 135px;
+}
+.time_down {
+  padding: 0 135px 0 5px;
+}
+.inactive {
+  display: none;
+}
+.winer_time,
+.winner_car {
+  margin: 0 10px;
+}
+/* ______ MODAL ______ */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  color: #000000;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  width: 35%;
+  padding: 15px;
+  background: #f5f2e5ed;
+  box-shadow: 0px 5px 20px 15px rgba(13, 13, 13, 0.04);
+  border: 5px dotted #ffba08;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.close {
+  float: right;
+}
+
+.close:hover {
+  color: #000;
+  cursor: pointer;
+}
